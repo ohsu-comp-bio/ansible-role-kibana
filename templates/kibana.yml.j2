@@ -21,10 +21,12 @@ elasticsearch_url: {{ kibana_elasticsearch_url }}
 
 # Kibana uses an index in Elasticsearch to store saved searches, visualizations
 # and dashboards. It will create a new index if it doesn't already exist.
-# kibana.index: ".kibana"
+kibana.index: ".kibana"
+kibana_index: ".kibana"
 
 # The default application to load.
-# kibana.defaultAppId: "discover"
+kibana.defaultAppId: "discover"
+default_app_id: "discover"
 
 # If your Elasticsearch is protected with basic auth, these are the user credentials
 # used by the Kibana server to perform maintenance on the kibana_index at startup. Your Kibana
@@ -82,3 +84,17 @@ elasticsearch_url: {{ kibana_elasticsearch_url }}
 
 # Set this to true to log all events, including system usage information and all requests.
 # logging.verbose: false
+
+# Plugins that are included in the build, and no longer found in the plugins/
+# folder
+bundled_plugin_ids:
+ - plugins/dashboard/index
+ - plugins/discover/index
+ - plugins/doc/index
+ - plugins/kibana/index
+ - plugins/markdown_vis/index
+ - plugins/metric_vis/index
+ - plugins/settings/index
+ - plugins/table_vis/index
+ - plugins/vis_types/index
+ - plugins/visualize/index
