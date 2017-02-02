@@ -1,0 +1,9 @@
+# vars/main.yml.example should be customized to vars/main.yml
+vars/main.yml
+
+# vim
+*.swp
+
+# ansible
+*.retry
+vault_pass.txt
